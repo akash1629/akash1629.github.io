@@ -1,0 +1,22 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="200" fill="#f8f9fa"/>
+  
+  <!-- Document Icon -->
+  <rect x="50" y="30" width="300" height="140" rx="5" fill="#ffffff" stroke="#cccccc" stroke-width="2"/>
+  
+  <!-- Document Header -->
+  <rect x="70" y="45" width="260" height="25" fill="#0066cc" rx="3"/>
+  <text x="200" y="62" font-family="Arial" font-size="14" fill="white" text-anchor="middle">System Documentation</text>
+  
+  <!-- Document Content -->
+  <rect x="70" y="85" width="40" height="40" fill="#e9ecef" rx="3"/>
+  <rect x="120" y="85" width="210" height="8" fill="#212529" rx="2"/>
+  <rect x="120" y="100" width="180" height="8" fill="#6c757d" rx="2"/>
+  <rect x="120" y="115" width="190" height="8" fill="#6c757d" rx="2"/>
+  
+  <!-- Table of Contents -->
+  <rect x="70" y="140" width="260" height="1" fill="#dee2e6"/>
+  <rect x="70" y="150" width="120" height="8" fill="#0066cc" rx="2"/>
+  <rect x="200" y="150" width="130" height="8" fill="#e9ecef" rx="2"/>
+</svg>

@@ -1,0 +1,39 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="200" fill="#f8f9fa"/>
+  
+  <!-- Dashboard Frame -->
+  <rect x="50" y="30" width="300" height="140" rx="5" fill="#ffffff" stroke="#cccccc" stroke-width="2"/>
+  
+  <!-- Dashboard Header -->
+  <rect x="50" y="30" width="300" height="30" rx="5 5 0 0" fill="#0066cc"/>
+  <text x="200" y="50" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Business Analytics Dashboard</text>
+  
+  <!-- Bar Chart -->
+  <rect x="60" y="70" width="130" height="90" fill="#ffffff" stroke="#dee2e6" stroke-width="1"/>
+  <rect x="70" y="145" width="20" height="5" fill="#0066cc"/>
+  <rect x="70" y="125" width="20" height="25" fill="#0066cc"/>
+  <rect x="100" y="115" width="20" height="35" fill="#0066cc"/>
+  <rect x="130" y="105" width="20" height="45" fill="#0066cc"/>
+  <rect x="160" y="85" width="20" height="65" fill="#0066cc"/>
+  
+  <!-- Pie Chart -->
+  <rect x="200" y="70" width="140" height="90" fill="#ffffff" stroke="#dee2e6" stroke-width="1"/>
+  <circle cx="270" cy="115" r="35" fill="#e9ecef"/>
+  <path d="M 270 115 L 270 80 A 35 35 0 0 1 301 130 z" fill="#0066cc"/>
+  <path d="M 270 115 L 301 130 A 35 35 0 0 1 245 145 z" fill="#6c757d"/>
+  <path d="M 270 115 L 245 145 A 35 35 0 0 1 270 80 z" fill="#0088ff"/>
+  
+  <!-- KPI Indicators -->
+  <rect x="60" y="170" width="50" height="15" fill="#ffffff" stroke="#dee2e6" stroke-width="1"/>
+  <rect x="65" y="175" width="40" height="5" fill="#28a745"/>
+  
+  <rect x="120" y="170" width="50" height="15" fill="#ffffff" stroke="#dee2e6" stroke-width="1"/>
+  <rect x="125" y="175" width="40" height="5" fill="#dc3545"/>
+  
+  <rect x="180" y="170" width="50" height="15" fill="#ffffff" stroke="#dee2e6" stroke-width="1"/>
+  <rect x="185" y="175" width="40" height="5" fill="#ffc107"/>
+  
+  <rect x="240" y="170" width="50" height="15" fill="#ffffff" stroke="#dee2e6" stroke-width="1"/>
+  <rect x="245" y="175" width="40" height="5" fill="#17a2b8"/>
+</svg>
