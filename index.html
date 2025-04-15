@@ -819,116 +819,121 @@
             </div>
         </div>
     </section>
-    
-    <!-- Comments Section -->
-    <section class="comments" id="comments">
-        <div class="container">
-            <div class="section-title">
-                <h2>Join the Conversation</h2>
-                <p>Share your documentation challenges or ask questions about our services.</p>
+   <!-- Comments Section -->
+<section class="comments" id="comments">
+    <div class="container">
+        <div class="section-title">
+            <h2>Join the Conversation</h2>
+            <p>Share your documentation challenges or ask questions about our services.</p>
+        </div>
+        
+        <div class="comment-form-container">
+            <h3>Leave a Comment</h3>
+            <!-- Using Formspree for comment submission -->
+            <form action="https://formspree.io/f/xleqbkra" method="POST" id="commentForm">
+                <div id="commentSuccess" class="success-message">
+                    <p>Your comment has been submitted and will appear after review. Thank you!</p>
+                </div>
+                <div class="form-group">
+                    <label for="commenterName">Your Name</label>
+                    <input type="text" id="commenterName" name="commenterName" required>
+                </div>
+                <div class="form-group">
+                    <label for="commenterEmail">Your Email</label>
+                    <input type="email" id="commenterEmail" name="commenterEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="commentText">Your Comment</label>
+                    <textarea id="commentText" name="commentText" rows="4" required></textarea>
+                </div>
+                <input type="hidden" name="form-type" value="comment">
+                <button type="submit" class="submit-button">Post Comment</button>
+            </form>
+        </div>
+        
+        <div class="comments-display">
+            <h3>Recent Comments</h3>
+            <div class="comment-item">
+                <div class="comment-avatar">MB</div>
+                <div class="comment-content">
+                    <div class="comment-header">
+                        <h4>Michael Brown</h4>
+                        <span class="comment-date">April 10, 2025</span>
+                    </div>
+                    <p>The process documentation you created for our company saved us countless hours of training time. New employees can now get up to speed much faster.</p>
+                    <div class="comment-actions">
+                        <button class="comment-reply-btn" onclick="showReplyForm('reply-1')">Reply</button>
+                        <form action="https://formspree.io/f/xleqbkra" method="POST" id="reply-1" class="reply-form">
+                            <div class="form-group">
+                                <label for="replyName-1">Your Name</label>
+                                <input type="text" id="replyName-1" name="replyName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="replyEmail-1">Your Email</label>
+                                <input type="email" id="replyEmail-1" name="replyEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="replyText-1">Your Reply</label>
+                                <textarea id="replyText-1" name="replyText" rows="3" required></textarea>
+                            </div>
+                            <input type="hidden" name="parent-comment" value="Michael Brown comment">
+                            <input type="hidden" name="form-type" value="reply">
+                            <button type="submit" class="submit-button">Submit Reply</button>
+                        </form>
+                    </div>
+                </div>
             </div>
             
-            <div class="comment-form-container">
-                <h3>Leave a Comment</h3>
-                <form id="commentForm">
-                    <div class="form-group">
-                        <label for="commenterName">Your Name</label>
-                        <input type="text" id="commenterName" required>
+            <div class="comment-item comment-reply">
+                <div class="comment-avatar">DE</div>
+                <div class="comment-content">
+                    <div class="comment-header">
+                        <h4>DocExperts Team</h4>
+                        <span class="comment-date">April 11, 2025</span>
                     </div>
-                    <div class="form-group">
-                        <label for="commenterEmail">Your Email</label>
-                        <input type="email" id="commenterEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="commentText">Your Comment</label>
-                        <textarea id="commentText" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button" id="postCommentBtn">Post Comment</button>
-                </form>
-                <div class="success-message" id="commentSuccess">
-                    Your comment has been posted successfully! It will appear after moderation.
+                    <p>Thanks for your feedback, Michael! We're glad to hear the documentation is helping with your onboarding process.</p>
                 </div>
             </div>
             
-            <div class="comments-display">
-                <h3>Recent Comments</h3>
-                <div class="comment-item">
-                    <div class="comment-avatar">MB</div>
-                    <div class="comment-content">
-                        <div class="comment-header">
-                            <h4>Michael Brown</h4>
-                            <span class="comment-date">April 10, 2025</span>
-                        </div>
-                        <p>The process documentation you created for our company saved us countless hours of training time. New employees can now get up to speed much faster.</p>
-                        <div class="comment-actions">
-                            <button class="comment-reply-btn" onclick="toggleReplyForm('1')">Reply</button>
-                            <div class="reply-form" id="replyForm-1">
-                                <div class="form-group">
-                                    <label for="replyName-1">Your Name</label>
-                                    <input type="text" id="replyName-1" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="replyEmail-1">Your Email</label>
-                                    <input type="email" id="replyEmail-1" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="replyText-1">Your Reply</label>
-                                    <textarea id="replyText-1" rows="3" required></textarea>
-                                </div>
-                                <button type="button" class="submit-button" onclick="submitReply('1')">Submit Reply</button>
+            <div class="comment-item">
+                <div class="comment-avatar">SJ</div>
+                <div class="comment-content">
+                    <div class="comment-header">
+                        <h4>Sarah Johnson</h4>
+                        <span class="comment-date">April 8, 2025</span>
+                    </div>
+                    <p>Do you provide documentation services for mobile applications? We're launching a new app next month and need comprehensive user guides.</p>
+                    <div class="comment-actions">
+                        <button class="comment-reply-btn" onclick="showReplyForm('reply-2')">Reply</button>
+                        <form action="https://formspree.io/f/xleqbkra" method="POST" id="reply-2" class="reply-form">
+                            <div class="form-group">
+                                <label for="replyName-2">Your Name</label>
+                                <input type="text" id="replyName-2" name="replyName" required>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="comment-item comment-reply">
-                    <div class="comment-avatar">DE</div>
-                    <div class="comment-content">
-                        <div class="comment-header">
-                            <h4>DocExperts Team</h4>
-                            <span class="comment-date">April 11, 2025</span>
-                        </div>
-                        <p>Thanks for your feedback, Michael! We're glad to hear the documentation is helping with your onboarding process.</p>
-                    </div>
-                </div>
-                
-                <div class="comment-item">
-                    <div class="comment-avatar">SJ</div>
-                    <div class="comment-content">
-                        <div class="comment-header">
-                            <h4>Sarah Johnson</h4>
-                            <span class="comment-date">April 8, 2025</span>
-                        </div>
-                        <p>Do you provide documentation services for mobile applications? We're launching a new app next month and need comprehensive user guides.</p>
-                        <div class="comment-actions">
-                            <button class="comment-reply-btn" onclick="toggleReplyForm('2')">Reply</button>
-                            <div class="reply-form" id="replyForm-2">
-                                <div class="form-group">
-                                    <label for="replyName-2">Your Name</label>
-                                    <input type="text" id="replyName-2" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="replyEmail-2">Your Email</label>
-                                    <input type="email" id="replyEmail-2" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="replyText-2">Your Reply</label>
-                                    <textarea id="replyText-2" rows="3" required></textarea>
-                                </div>
-                                <button type="button" class="submit-button" onclick="submitReply('2')">Submit Reply</button>
+                            <div class="form-group">
+                                <label for="replyEmail-2">Your Email</label>
+                                <input type="email" id="replyEmail-2" name="replyEmail" required>
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <label for="replyText-2">Your Reply</label>
+                                <textarea id="replyText-2" name="replyText" rows="3" required></textarea>
+                            </div>
+                            <input type="hidden" name="parent-comment" value="Sarah Johnson comment">
+                            <input type="hidden" name="form-type" value="reply">
+                            <button type="submit" class="submit-button">Submit Reply</button>
+                        </form>
                     </div>
                 </div>
-                
-                <div class="comments-loader">
-                    <button class="load-more-btn" id="loadMoreBtn">Load More Comments</button>
-                </div>
+            </div>
+            
+            <div class="comments-loader">
+                <button class="load-more-btn" id="loadMoreBtn">Load More Comments</button>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-   <!-- Contact Section - Improved with working email functionality -->
+<!-- Contact Section - Improved with working email functionality -->
 <section class="contact" id="contact">
     <div class="container">
         <div class="section-title">
@@ -974,302 +979,8 @@
             </div>
         </div>
     </div>
-</section>
-
-
-
-<!-- CSS Improvements for Contact Form and Comments -->
-<style>
-    /* Enhanced Form Styling */
-    .contact-form input,
-    .contact-form textarea,
-    .comment-form-container input,
-    .comment-form-container textarea,
-    .reply-form input,
-    .reply-form textarea {
-        width: 100%;
-        padding: 15px;
-        border: 1px solid #e1e1e1;
-        border-radius: 8px;
-        font-size: 16px;
-        transition: border-color 0.3s, box-shadow 0.3s;
-        margin-top: 8px;
-        background-color: #f9f9f9;
-    }
-    
-    .contact-form input:focus,
-    .contact-form textarea:focus,
-    .comment-form-container input:focus,
-    .comment-form-container textarea:focus,
-    .reply-form input:focus,
-    .reply-form textarea:focus {
-        border-color: #0066cc;
-        box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
-        outline: none;
-        background-color: #fff;
-    }
-    
-    .contact-form label,
-    .comment-form-container label,
-    .reply-form label {
-        display: block;
-        margin-bottom: 5px;
-        color: #444;
-        font-weight: 500;
-        font-size: 16px;
-    }
-    
-    .contact-form .form-group,
-    .comment-form-container .form-group,
-    .reply-form .form-group {
-        margin-bottom: 25px;
-    }
-    
-    .submit-button {
-        background-color: #0066cc;
-        color: #fff;
-        border: none;
-        padding: 14px 35px;
-        border-radius: 30px;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s;
-        display: inline-block;
-    }
-    
-    .submit-button:hover {
-        background-color: #0055aa;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
-    }
-    
-    /* Comment Section Styling */
-    .comments {
-        padding: 100px 0;
-        background-color: #f8f9fa;
-    }
-    
-    .comment-form-container {
-        background-color: #fff;
-        padding: 40px;
-        border-radius: 15px;
-        margin-bottom: 50px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    }
-    
-    .comment-form-container h3 {
-        margin-bottom: 25px;
-        color: #333;
-        font-size: 24px;
-    }
-    
-    .comments-display h3 {
-        margin-bottom: 35px;
-        color: #333;
-        font-size: 24px;
-    }
-    
-    .comment-item {
-        display: flex;
-        margin-bottom: 35px;
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    }
-    
-    .comment-reply {
-        margin-left: 60px;
-        background-color: #f0f7ff;
-    }
-    
-    .comment-avatar {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: #0066cc;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        margin-right: 25px;
-        flex-shrink: 0;
-        font-size: 18px;
-    }
-    
-    .comment-content {
-        flex-grow: 1;
-    }
-    
-    .comment-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 15px;
-    }
-    
-    .comment-header h4 {
-        font-size: 18px;
-        color: #333;
-    }
-    
-    .comment-date {
-        color: #777;
-        font-size: 14px;
-    }
-    
-    .comment-content p {
-        font-size: 16px;
-        line-height: 1.7;
-        color: #444;
-        margin-bottom: 15px;
-    }
-    
-    .comment-actions {
-        margin-top: 20px;
-    }
-    
-    .comment-reply-btn {
-        background: none;
-        border: 1px solid #0066cc;
-        color: #0066cc;
-        font-weight: 500;
-        cursor: pointer;
-        padding: 8px 20px;
-        border-radius: 20px;
-        font-size: 14px;
-        transition: all 0.3s;
-    }
-    
-    .comment-reply-btn:hover {
-        background-color: #0066cc;
-        color: #fff;
-    }
-    
-    .reply-form {
-        margin-top: 25px;
-        display: none;
-        background-color: #f9f9f9;
-        padding: 25px;
-        border-radius: 10px;
-        border-left: 3px solid #0066cc;
-    }
-    
-    .comments-loader {
-        text-align: center;
-        margin-top: 40px;
-    }
-    
-    .load-more-btn {
-        background-color: transparent;
-        border: 1px solid #0066cc;
-        color: #0066cc;
-        padding: 12px 30px;
-        border-radius: 30px;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s;
-    }
-    
-    .load-more-btn:hover {
-        background-color: #0066cc;
-        color: #fff;
-        transform: translateY(-2px);
-    }
-    
-    /* Success Message Styling */
-    .success-message {
-        display: none;
-        background-color: #d4edda;
-        color: #155724;
-        padding: 15px 20px;
-        border-radius: 8px;
-        margin-bottom: 25px;
-        text-align: center;
-        font-weight: 500;
-        box-shadow: 0 3px 10px rgba(21, 87, 36, 0.1);
-        border-left: 4px solid #28a745;
-    }
-    
-    .success-message.active {
-        display: block;
-    }
-    
-    /* Contact section improvements */
-    .contact {
-        padding: 100px 0;
-        background-color: #fff;
-    }
-    
-    .contact-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-    }
-    
-    .contact-info {
-        background-color: #f8f9fa;
-        padding: 40px;
-        border-radius: 15px;
-        height: fit-content;
-    }
-    
-    .contact-info h3 {
-        margin-bottom: 30px;
-        font-size: 24px;
-        color: #333;
-    }
-    
-    .contact-detail {
-        display: flex;
-        margin-bottom: 25px;
-        align-items: center;
-    }
-    
-    .contact-icon {
-        color: #0066cc;
-        margin-right: 20px;
-        font-size: 24px;
-        width: 50px;
-        height: 50px;
-        background-color: #e6f0ff;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .contact-detail p {
-        font-size: 16px;
-        color: #555;
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .contact-wrapper {
-            grid-template-columns: 1fr;
-        }
-        
-        .comment-reply {
-            margin-left: 30px;
-        }
-        
-        .comment-form-container,
-        .comment-item {
-            padding: 25px;
-        }
-        
-        .contact-info {
-            padding: 30px;
-        }
-    }
-</style>
-
-<!-- JavaScript for form handling -->
-<script>
+</section> 
+   <script>
     // Show reply form when reply button is clicked
     function showReplyForm(formId) {
         const form = document.getElementById(formId);
