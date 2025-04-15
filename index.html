@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="google837709728571e64f.html">
-    <meta name="description" content="Professional technical documentation and data analytics services. We transform complex information into clear, user-friendly documentation and insightful reports that drive business decisions.">
+    <meta name="description" content="Professional technical documentation and data analytics services. We create clear, user-friendly documentation for software, systems, and business processes.">
     <meta name="keywords" content="technical documentation, user manuals, business analysis, data analytics, documentation services, Mumbai, system documentation, process workflows, data insights, training materials">
-    <meta name="author" content="TechDocsHub">
+    <meta name="author" content="DocExperts">
     
     <!-- Social media meta tags -->
-    <meta property="og:title" content="TechDocsHub - Technical Documentation & Analytics Experts">
+    <meta property="og:title" content="DocExperts - Technical Documentation & Analytics Experts">
     <meta property="og:description" content="Professional documentation and analytics services for businesses of all sizes. We transform complexity into clarity.">
     <meta property="og:url" content="https://akash1629.github.io/">
     <meta property="og:type" content="website">
     
-    <title>Documentation & Analytics Professionals</title>
+    <title>DocExperts | Professional Technical Documentation & Analytics Services</title>
     <style>
         /* Global Styles */
         * {
@@ -196,11 +196,12 @@
         
         .portfolio-image {
             height: 200px;
-            background-color: #f8f9fa;
+            background-color: #ddd;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px;
+            color: #888;
+            font-size: 18px;
         }
         
         .portfolio-content {
@@ -371,6 +372,122 @@
             background-color: #0055aa;
         }
         
+        /* Comments Section */
+        .comments {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .comment-form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .comment-form-container h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .comments-display h3 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .comment-item {
+            display: flex;
+            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .comment-reply {
+            margin-left: 60px;
+            background-color: #f0f7ff;
+        }
+        
+        .comment-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #0066cc;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .comment-content {
+            flex-grow: 1;
+        }
+        
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .comment-date {
+            color: #777;
+            font-size: 14px;
+        }
+        
+        .comment-actions {
+            margin-top: 15px;
+        }
+        
+        .comment-reply-btn {
+            background: none;
+            border: none;
+            color: #0066cc;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 0;
+        }
+        
+        .comment-reply-btn:hover {
+            text-decoration: underline;
+        }
+        
+        .reply-form {
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .reply-form.active {
+            display: block;
+        }
+        
+        .comments-loader {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .load-more-btn {
+            background-color: transparent;
+            border: 1px solid #0066cc;
+            color: #0066cc;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .load-more-btn:hover {
+            background-color: #0066cc;
+            color: #fff;
+        }
+        
         /* Footer */
         footer {
             background-color: #333;
@@ -442,6 +559,21 @@
             font-size: 14px;
         }
         
+        /* Form Success Message */
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .success-message.active {
+            display: block;
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
             .header-content {
@@ -476,6 +608,10 @@
             .contact-wrapper {
                 grid-template-columns: 1fr;
             }
+            
+            .comment-reply {
+                margin-left: 30px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -486,21 +622,67 @@
             .process-step:after {
                 display: none;
             }
+            
+            .comment-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .comment-date {
+                margin-top: 5px;
+            }
         }
     </style>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "DocExperts",
+      "description": "Professional technical documentation and data analytics services.",
+      "url": "https://akash1629.github.io/",
+      "telephone": "+1-555-123-4567",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Business Avenue, Suite 456",
+        "addressLocality": "Enterprise City",
+        "postalCode": "12345",
+        "addressCountry": "US"
+      },
+      "service": [
+        {
+          "@type": "Service",
+          "name": "Technical Documentation",
+          "description": "Clear, comprehensive user manuals, guides, and process documentation."
+        },
+        {
+          "@type": "Service",
+          "name": "Data Analytics",
+          "description": "Custom interactive dashboards and detailed reports."
+        },
+        {
+          "@type": "Service",
+          "name": "Business Analysis",
+          "description": "Thorough requirements gathering and process mapping."
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">Tech<span>DocsHub</span></div>
+                <div class="logo">Doc<span>Experts</span></div>
                 <nav>
                     <ul>
-                        <li><a href="#services" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'}); return false;">Services</a></li>
-                        <li><a href="#portfolio" onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'}); return false;">Portfolio</a></li>
-                        <li><a href="#process" onclick="document.getElementById('process').scrollIntoView({behavior: 'smooth'}); return false;">Process</a></li>
-                        <li><a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); return false;">Contact</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#comments">Discussions</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -511,7 +693,7 @@
     <section class="hero">
         <div class="container">
             <h1>Technical Documentation & Data Analytics Experts</h1>
-            <p>We transform complex information into clear, user-friendly documentation and insightful data reports that drive informed business decisions.</p>
+            <p>We transform complex information into clear, user-friendly documentation and powerful data dashboards that drive informed decisions.</p>
             <a href="#contact" class="cta-button">Get Started Today</a>
         </div>
     </section>
@@ -557,30 +739,24 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="documentation-image.svg" alt="System Documentation Sample" style="max-width:100%; max-height:170px;">
-                    </div>
+                    <div class="portfolio-image">Software User Manual Sample</div>
                     <div class="portfolio-content">
-                        <h3>Comprehensive System Documentation</h3>
-                        <p>Created detailed user manuals from scratch for retail systems, including business, technical, and functional requirements to serve as a complete standard operating procedure across multiple locations.</p>
+                        <h3>Enterprise CRM Documentation</h3>
+                        <p>Comprehensive user guides for a complex customer relationship management system used by a Fortune 500 company.</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="improved-workflow-image.svg" alt="Workflow Design Sample" style="max-width:100%; max-height:170px;">
-                    </div>
+                    <div class="portfolio-image">Analytics Dashboard Sample</div>
                     <div class="portfolio-content">
-                        <h3>Business Architecture & Workflow Design</h3>
-                        <p>Developed comprehensive business architecture and process workflows for various projects, including detailed analysis, matrices, and risk assessments to streamline operations.</p>
+                        <h3>Sales Performance Dashboard</h3>
+                        <p>Interactive dashboard providing real-time sales metrics and KPIs for a retail chain with 50+ locations.</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="data-image.svg" alt="Data Insights Sample" style="max-width:100%; max-height:170px;">
-                    </div>
+                    <div class="portfolio-image">Process Documentation Sample</div>
                     <div class="portfolio-content">
-                        <h3>Data Analysis & Business Insights</h3>
-                        <p>Created comprehensive data flow diagrams for enterprise systems. Provided data insights to teams through detailed documentation and reporting to support business decision-making.</p>
+                        <h3>Manufacturing Workflow Documentation</h3>
+                        <p>Detailed process maps and SOPs for a manufacturing company that streamlined operations by 27%.</p>
                     </div>
                 </div>
             </div>
@@ -629,11 +805,119 @@
             <div class="testimonial-card">
                 <p class="testimonial-text">"The user manual they created for our new software system has significantly reduced support tickets and improved user adoption. The clarity and organization of the documentation is exceptional."</p>
                 <div class="client-info">
-                    <div class="client-avatar">CP</div>
+                    <div class="client-avatar">JD</div>
                     <div class="client-details">
-                        <h4>Client Name</h4>
-                        <p class="client-company">CTO, Software Company</p>
+                        <h4>John Doe</h4>
+                        <p class="client-company">CTO, TechSolutions Inc.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Comments Section -->
+    <section class="comments" id="comments">
+        <div class="container">
+            <div class="section-title">
+                <h2>Join the Conversation</h2>
+                <p>Share your documentation challenges or ask questions about our services.</p>
+            </div>
+            
+            <div class="comment-form-container">
+                <h3>Leave a Comment</h3>
+                <form id="commentForm">
+                    <div class="form-group">
+                        <label for="commenterName">Your Name</label>
+                        <input type="text" id="commenterName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="commenterEmail">Your Email</label>
+                        <input type="email" id="commenterEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="commentText">Your Comment</label>
+                        <textarea id="commentText" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Post Comment</button>
+                </form>
+                <div class="success-message" id="commentSuccess">
+                    Your comment has been posted successfully! It will appear after moderation.
+                </div>
+            </div>
+            
+            <div class="comments-display">
+                <h3>Recent Comments</h3>
+                <div class="comment-item">
+                    <div class="comment-avatar">MB</div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <h4>Michael Brown</h4>
+                            <span class="comment-date">April 10, 2025</span>
+                        </div>
+                        <p>The process documentation you created for our company saved us countless hours of training time. New employees can now get up to speed much faster.</p>
+                        <div class="comment-actions">
+                            <button class="comment-reply-btn" data-comment-id="1">Reply</button>
+                            <div class="reply-form" id="replyForm-1">
+                                <div class="form-group">
+                                    <label for="replyName-1">Your Name</label>
+                                    <input type="text" id="replyName-1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="replyEmail-1">Your Email</label>
+                                    <input type="email" id="replyEmail-1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="replyText-1">Your Reply</label>
+                                    <textarea id="replyText-1" rows="3" required></textarea>
+                                </div>
+                                <button type="button" class="submit-button">Submit Reply</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comment-item comment-reply">
+                    <div class="comment-avatar">DE</div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <h4>DocExperts Team</h4>
+                            <span class="comment-date">April 11, 2025</span>
+                        </div>
+                        <p>Thanks for your feedback, Michael! We're glad to hear the documentation is helping with your onboarding process.</p>
+                    </div>
+                </div>
+                
+                <div class="comment-item">
+                    <div class="comment-avatar">SJ</div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <h4>Sarah Johnson</h4>
+                            <span class="comment-date">April 8, 2025</span>
+                        </div>
+                        <p>Do you provide documentation services for mobile applications? We're launching a new app next month and need comprehensive user guides.</p>
+                        <div class="comment-actions">
+                            <button class="comment-reply-btn" data-comment-id="2">Reply</button>
+                            <div class="reply-form" id="replyForm-2">
+                                <div class="form-group">
+                                    <label for="replyName-2">Your Name</label>
+                                    <input type="text" id="replyName-2" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="replyEmail-2">Your Email</label>
+                                    <input type="email" id="replyEmail-2" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="replyText-2">Your Reply</label>
+                                    <textarea id="replyText-2" rows="3" required></textarea>
+                                </div>
+                                <button type="button" class="submit-button">Submit Reply</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comments-loader">
+                    <button class="load-more-btn">Load More Comments</button>
                 </div>
             </div>
         </div>
@@ -651,74 +935,9 @@
                     <h3>Let's Connect</h3>
                     <div class="contact-detail">
                         <div class="contact-icon">📱</div>
-                        <p>7678081948</p>
+                        <p>+1 (555) 123-4567</p>
                     </div>
                     <div class="contact-detail">
                         <div class="contact-icon">📧</div>
-                        <p>akashraut16299@gmail.com</p>
+                        <p>info@docexperts.com</p>
                     </div>
-                    <div class="contact-detail">
-                        <div class="contact-icon">🏢</div>
-                        <p>Bhagat Singh Nagar, Link Road<br>Goregaon West, Mumbai - 400104</p>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-company">
-                    <div class="footer-logo">TechDocsHub</div>
-                    <p>Professional documentation and analytics services for businesses of all sizes. We transform complexity into clarity.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link">FB</a>
-                        <a href="#" class="social-link">TW</a>
-                        <a href="#" class="social-link">LI</a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#">Technical Documentation</a></li>
-                        <li><a href="#">Data Dashboards</a></li>
-                        <li><a href="#">Business Analysis</a></li>
-                        <li><a href="#">Training Materials</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#process">Our Process</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 TechDocsHub. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
