@@ -196,12 +196,11 @@
         
         .portfolio-image {
             height: 200px;
-            background-color: #ddd;
+            background-color: #f8f9fa;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #888;
-            font-size: 18px;
+            padding: 15px;
         }
         
         .portfolio-content {
@@ -739,21 +738,27 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <div class="portfolio-image">Software User Manual Sample</div>
+                    <div class="portfolio-image">
+                        <img src="documentation-image.svg" alt="System Documentation Sample" style="max-width:100%; max-height:170px;">
+                    </div>
                     <div class="portfolio-content">
                         <h3>Enterprise CRM Documentation</h3>
                         <p>Comprehensive user guides for a complex customer relationship management system used by a Fortune 500 company.</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <div class="portfolio-image">Analytics Dashboard Sample</div>
+                    <div class="portfolio-image">
+                        <img src="improved-workflow-image.svg" alt="Workflow Design Sample" style="max-width:100%; max-height:170px;">
+                    </div>
                     <div class="portfolio-content">
                         <h3>Sales Performance Dashboard</h3>
                         <p>Interactive dashboard providing real-time sales metrics and KPIs for a retail chain with 50+ locations.</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <div class="portfolio-image">Process Documentation Sample</div>
+                    <div class="portfolio-image">
+                        <img src="data-image.svg" alt="Data Insights Sample" style="max-width:100%; max-height:170px;">
+                    </div>
                     <div class="portfolio-content">
                         <h3>Manufacturing Workflow Documentation</h3>
                         <p>Detailed process maps and SOPs for a manufacturing company that streamlined operations by 27%.</p>
@@ -838,7 +843,7 @@
                         <label for="commentText">Your Comment</label>
                         <textarea id="commentText" rows="4" required></textarea>
                     </div>
-                    <button type="submit" class="submit-button">Post Comment</button>
+                    <button type="submit" class="submit-button" id="postCommentBtn">Post Comment</button>
                 </form>
                 <div class="success-message" id="commentSuccess">
                     Your comment has been posted successfully! It will appear after moderation.
@@ -856,7 +861,7 @@
                         </div>
                         <p>The process documentation you created for our company saved us countless hours of training time. New employees can now get up to speed much faster.</p>
                         <div class="comment-actions">
-                            <button class="comment-reply-btn" data-comment-id="1">Reply</button>
+                            <button class="comment-reply-btn" onclick="toggleReplyForm('1')">Reply</button>
                             <div class="reply-form" id="replyForm-1">
                                 <div class="form-group">
                                     <label for="replyName-1">Your Name</label>
@@ -870,7 +875,7 @@
                                     <label for="replyText-1">Your Reply</label>
                                     <textarea id="replyText-1" rows="3" required></textarea>
                                 </div>
-                                <button type="button" class="submit-button">Submit Reply</button>
+                                <button type="button" class="submit-button" onclick="submitReply('1')">Submit Reply</button>
                             </div>
                         </div>
                     </div>
@@ -896,7 +901,7 @@
                         </div>
                         <p>Do you provide documentation services for mobile applications? We're launching a new app next month and need comprehensive user guides.</p>
                         <div class="comment-actions">
-                            <button class="comment-reply-btn" data-comment-id="2">Reply</button>
+                            <button class="comment-reply-btn" onclick="toggleReplyForm('2')">Reply</button>
                             <div class="reply-form" id="replyForm-2">
                                 <div class="form-group">
                                     <label for="replyName-2">Your Name</label>
@@ -910,14 +915,14 @@
                                     <label for="replyText-2">Your Reply</label>
                                     <textarea id="replyText-2" rows="3" required></textarea>
                                 </div>
-                                <button type="button" class="submit-button">Submit Reply</button>
+                                <button type="button" class="submit-button" onclick="submitReply('2')">Submit Reply</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="comments-loader">
-                    <button class="load-more-btn">Load More Comments</button>
+                    <button class="load-more-btn" id="loadMoreBtn">Load More Comments</button>
                 </div>
             </div>
         </div>
@@ -928,16 +933,4 @@
         <div class="container">
             <div class="section-title">
                 <h2>Contact Us</h2>
-                <p>Ready to transform your documentation and data analysis? Get in touch with us today.</p>
-            </div>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <div class="contact-detail">
-                        <div class="contact-icon">📱</div>
-                        <p>+1 (555) 123-4567</p>
-                    </div>
-                    <div class="contact-detail">
-                        <div class="contact-icon">📧</div>
-                        <p>info@docexperts.com</p>
-                    </div>
+                <p>Ready
